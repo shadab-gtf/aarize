@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aarize Group</title>
+  <meta name="description" content="Aarize The Tessoro – an uber-luxury mall on the 75 m wide Upper Dwarka Expressway, Sector 114, Gurugram, with anchor stores, a superplex, entertainment zone, food court and club & bar.">
+  <link rel="icon" href="data:,">
+
+  <!-- Preload the LCP banner (mobile / desktop art direction) -->
+  <link rel="preload" as="image" type="image/avif" fetchpriority="high" media="(max-width: 79.999rem)"
+    imagesrcset="/images/opt/mobile-banner-480.avif 480w, /images/opt/mobile-banner-680.avif 680w, /images/opt/mobile-banner-800.avif 800w, /images/opt/mobile-banner-940.avif 940w"
+    imagesizes="calc(100vw - 2rem)">
+  <link rel="preload" as="image" type="image/avif" fetchpriority="high" media="(min-width: 80rem)"
+    imagesrcset="/images/opt/banner-image-1300.avif 1300w, /images/opt/banner-image-1600.avif 1600w, /images/opt/banner-image-1944.avif 1944w"
+    imagesizes="calc(100vw - 4rem)">
+
+  <!-- Tailwind (precompiled from css/tailwind.input.css) + theme + AOS styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+<style>
+
+  @font-face {
+  font-family: "Forum";
+  src: url("./fonts/Forum-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("./fonts/Mulish-VariableFont_wght.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: #ffffff;
+}
+
+
+
+.site-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.site-container2 {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+@media (max-width: 768px) {
+  .site-container2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .site-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+
+
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-line {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.menu-button.active .line-one {
+  transform: translateY(0.4rem) rotate(45deg);
+}
+
+.menu-button.active .line-two {
+  opacity: 0;
+}
+
+.menu-button.active .line-three {
+  transform: translateY(-0.4rem) rotate(-45deg);
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+
+
+.gallery-card {
+  overflow: hidden;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 800ms ease-out;
+}
+
+.gallery-card:hover .gallery-image {
+  transform: scale(1.08);
+}
+
+
+.zone-image-wrapper {
+  overflow: hidden;
+  border: 0.0625rem solid #283F83;
+}
+
+.zone-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zone-blurred-image {
+  filter: blur(0.18rem);
+  transform: scale(1.03);
+}
+</style>
+
+</head>
+
+<body>
+
+  <header class="!relative !z-50 !bg-white">
+    <div class="site-container !mx-auto !flex !h-[5rem] !items-center !justify-between lg:!h-[6rem]">
+      <a href="/" class="!block !shrink-0" aria-label="Aarize Group">
+        <img src="/images/opt/Arrize-logo-320.webp" srcset="/images/opt/Arrize-logo-320.webp 320w, /images/opt/Arrize-logo-480.webp 480w" sizes="(min-width: 80rem) 10rem, (min-width: 40rem) 8rem, 7.5rem" width="320" height="66" alt="Aarize Group" class="!block !h-auto !w-[7.5rem] sm:!w-[8rem] lg:!w-[10rem] !mt-2">
+      </a>
+
+      <nav class="!hidden !items-center !gap-[1rem] lg:!flex xl:!gap-[1.5rem]">
+        <a href="#home" class="!text-[0.85rem] !font-medium !text-rose !transition-colors !duration-300 hover:!text-blue xl:!text-[0.95rem]">Home</a>
+        <span aria-hidden="true" class="!text-[0.8rem] !text-blue/40">•</span>
+        <a href="#highlights" class="!text-[0.85rem] !font-medium !text-blue !transition-colors !duration-300 hover:!text-rose xl:!text-[0.95rem]">Highlights</a>
+        <span aria-hidden="true" class="!text-[0.8rem] !text-blue/40">•</span>
+        <a href="#locationadvantage" class="!text-[0.85rem] !font-medium !text-blue !transition-colors !duration-300 hover:!text-rose xl:!text-[0.95rem]">Location Advantage</a>
+        <span aria-hidden="true" class="!text-[0.8rem] !text-blue/40">•</span>
+        <a href="#gallery" class="!text-[0.85rem] !font-medium !text-blue !transition-colors !duration-300 hover:!text-rose xl:!text-[0.95rem]">Gallery</a>
+        <span aria-hidden="true" class="!text-[0.8rem] !text-blue/40">•</span>
+        <a href="#zones" class="!text-[0.85rem] !font-medium !text-blue !transition-colors !duration-300 hover:!text-rose xl:!text-[0.95rem]">Zones</a>
+        <span aria-hidden="true" class="!text-[0.8rem] !text-blue/40">•</span>
+        <a href="#contact" class="!text-[0.85rem] !font-medium !text-blue !transition-colors !duration-300 hover:!text-rose xl:!text-[0.95rem]">Contact Us</a>
+      </nav>
+
+      <div class="!hidden !items-center !gap-[0.5rem] lg:!flex">
+        <a href="#contact" class="!flex !h-[2.5rem] !items-center !justify-center !bg-rose !px-[1.25rem] !text-[0.80rem] !font-semibold !text-white !transition-colors !duration-300 hover:!bg-blue xl:!h-[2.6rem] xl:!px-[1.5rem] xl:!text-[0.75rem]">Enquire Now</a>
+        <a href="tel:+919464700700" class="!flex !h-[2.5rem] !items-center !justify-center !gap-[0.4rem] !bg-rose !px-[1rem] !text-[0.80rem] !font-semibold !text-white !transition-colors !duration-300 hover:!bg-blue xl:!h-[2.6rem] xl:!px-[1.25rem] xl:!text-[0.75rem]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="!h-[0.8rem] !w-[0.8rem]">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3 a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91 a16 16 0 0 0 6 6l1.27-1.27 a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 A2 2 0 0 1 22 16.92z" />
+          </svg>
+          +91 9464 700 700
+        </a>
+      </div>
+
+      <button type="button" id="menuButton" class="menu-button !flex !h-[2.75rem] !w-[2.75rem] !items-center !justify-center lg:!hidden" aria-label="Open menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="!h-[1.5rem] !w-[1.5rem] !text-blue">
+          <path class="menu-line line-one" stroke-linecap="round" d="M4 7h16" />
+          <path class="menu-line line-two" stroke-linecap="round" d="M4 12h16" />
+          <path class="menu-line line-three" stroke-linecap="round" d="M4 17h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobileOverlay" class="mobile-overlay !fixed !inset-0 !z-[60] !bg-black/40 lg:!hidden"></div>
+
+  <aside id="mobileMenu" class="mobile-menu !fixed !right-0 !top-0 !z-[70] !flex !h-full !w-[18rem] !max-w-[85%] !flex-col !bg-white !px-[1.5rem] !py-[1.5rem] !shadow-2xl lg:!hidden">
+    <div class="!flex !items-center !justify-between !border-b !border-blue/10 !pb-[1.25rem]">
+      <img src="/images/opt/Arrize-logo-320.webp" width="320" height="66" loading="lazy" decoding="async" alt="Aarize Group" class="!h-auto !w-[7.5rem]">
+      <button type="button" id="mobileCloseButton" class="!flex !h-[2.5rem] !w-[2.5rem] !items-center !justify-center !text-blue" aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" class="!h-[1.5rem] !w-[1.5rem]">
+          <path stroke-linecap="round" d="M5 5l14 14" />
+          <path stroke-linecap="round" d="M19 5L5 19" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="!mt-[2rem] !flex !flex-col">
+      <a href="#home" class="mobile-link !border-b !border-blue/10 !py-[1rem] !text-[0.85rem] !font-medium !text-rose">Home</a>
+      <a href="#highlights" class="mobile-link !border-b !border-blue/10 !py-[1rem] !text-[0.85rem] !font-medium !text-blue">Highlights</a>
+      <a href="#locationadvantage" class="mobile-link !border-b !border-blue/10 !py-[1rem] !text-[0.85rem] !font-medium !text-blue">Location Advantage</a>
+      <a href="#gallery" class="mobile-link !border-b !border-blue/10 !py-[1rem] !text-[0.85rem] !font-medium !text-blue">Gallery</a>
+      <a href="#zones" class="mobile-link !border-b !border-blue/10 !py-[1rem] !text-[0.85rem] !font-medium !text-blue">Zones</a>
+      <a href="#contact" class="mobile-link !border-b !border-blue/10 !py-[1rem] !text-[0.85rem] !font-medium !text-blue">Contact Us</a>
+    </nav>
+
+    <div class="!mt-auto !flex !flex-col !gap-[0.75rem]">
+      <a href="#contact" class="mobile-link !flex !h-[3rem] !items-center !justify-center !bg-rose !text-[0.8rem] !font-semibold !text-white">Enquire Now</a>
+      <a href="tel:+919464700700" class="mobile-link !flex !h-[3rem] !items-center !justify-center !gap-[0.5rem] !bg-rose !text-[0.8rem] !font-semibold !text-white">+91 9464 700 700</a>
+    </div>
+  </aside>
+
+  <main>
+    <section id="home" class="!w-full">
+  <h1 class="sr-only">Aarize The Tessoro – Uber Luxury Mall, Sector 114, Dwarka Expressway, Gurugram</h1>
+  <div class="site-container !w-full">
+    <picture>
+      <source
+        media="(max-width: 79.999rem)"
+        type="image/avif"
+        srcset="/images/opt/mobile-banner-480.avif 480w, /images/opt/mobile-banner-680.avif 680w, /images/opt/mobile-banner-800.avif 800w, /images/opt/mobile-banner-940.avif 940w"
+        sizes="calc(100vw - 2rem)"
+        width="940"
+        height="1674"
+      >
+      <source
+        media="(max-width: 79.999rem)"
+        type="image/webp"
+        srcset="/images/opt/mobile-banner-480.webp 480w, /images/opt/mobile-banner-680.webp 680w, /images/opt/mobile-banner-800.webp 800w, /images/opt/mobile-banner-940.webp 940w"
+        sizes="calc(100vw - 2rem)"
+        width="940"
+        height="1674"
+      >
+      <source
+        type="image/avif"
+        srcset="/images/opt/banner-image-1300.avif 1300w, /images/opt/banner-image-1600.avif 1600w, /images/opt/banner-image-1944.avif 1944w"
+        sizes="calc(100vw - 4rem)"
+        width="1944"
+        height="809"
+      >
+
+      <img
+        src="/images/opt/banner-image-1600.webp"
+        srcset="/images/opt/banner-image-1300.webp 1300w, /images/opt/banner-image-1600.webp 1600w, /images/opt/banner-image-1944.webp 1944w"
+        sizes="calc(100vw - 4rem)"
+        alt="Aarize Group"
+        fetchpriority="high"
+        width="1944"
+        height="809"
+        class="!block !h-auto !w-full"
+      >
+    </picture>
+  </div>
+</section>
+
+    <section id="highlights" class="site-container">
+      <div class="!bg-rose !py-[3.5rem] sm:!py-[4rem] lg:!py-[4rem] xl:!py-[4.5rem]">
+        <div class="!grid !w-full !grid-cols-1 lg:!grid-cols-2">
+          <div data-aos="fade-right" data-aos-duration="800" data-aos-once="true" class="!flex !flex-col !items-center !text-center lg:!items-end lg:!border-r lg:!border-white lg:!pr-[4rem] lg:!text-right xl:!pr-[5rem]">
+            <h2 class="!font-display !text-[1.4rem] !font-normal !uppercase !leading-[1.3] !text-white sm:!text-[1.55rem] lg:!text-[1.45rem] xl:!text-[1.6rem]">An Indulgent Escape</h2>
+            <p class="!mt-[1rem] !max-w-[32rem] !text-[0.75rem] !font-normal !leading-[1.7] !text-white sm:!text-[0.8rem] lg:!text-[0.85rem] xl:!text-[0.90rem]">Strategic Zone Allocation and Tenant Profile Anchor Stores | Superplex | Entertainment Zone Food Court | Club & Bar</p>
+            <h2 class="!mt-[2.25rem] !font-display !text-[1.4rem] !font-normal !uppercase !leading-[1.3] !text-white sm:!text-[1.55rem] lg:!text-[1.45rem] xl:!text-[1.6rem]">Enter in Style, Leave in Luxury</h2>
+            <p class="!mt-[1rem] !max-w-[32rem] !text-[0.75rem] !font-normal !leading-[1.7] !text-white sm:!text-[0.8rem] lg:!text-[0.85rem] xl:!text-[0.90rem]">Best of International and Domestic Brands Personal Shopping Assistance | Valet Parking</p>
+          </div>
+
+          <div id="location" data-aos="fade-left" data-aos-duration="800" data-aos-once="true" class="!mt-[3rem] !flex !flex-col !items-center !text-center lg:!mt-0 lg:!items-start lg:!pl-[4rem] lg:!text-left xl:!pl-[5rem]">
+            <h2 class="!font-display !text-[1.4rem] !font-normal !uppercase !leading-[1.3] !text-white sm:!text-[1.55rem] lg:!text-[1.45rem] xl:!text-[1.6rem]">Located at the Heart of Opulence</h2>
+            <div class="!mt-[1.25rem] !space-y-[0.9rem]">
+              <p class="!text-[0.75rem] !font-normal !leading-[1.6] !text-white sm:!text-[0.8rem] lg:!text-[0.85rem] xl:!text-[0.90rem]">1ˢᵗ Uber Luxury Mall</p>
+              <p class="!text-[0.75rem] !font-normal !leading-[1.6] !text-white sm:!text-[0.8rem] lg:!text-[0.85rem] xl:!text-[0.90rem]">0 km* from Delhi</p>
+              <p class="!text-[0.75rem] !font-normal !leading-[1.6] !text-white sm:!text-[0.8rem] lg:!text-[0.85rem] xl:!text-[0.90rem]">Bang on 75 m Wide Road</p>
+              <p class="!text-[0.75rem] !font-normal !leading-[1.6] !text-white sm:!text-[0.8rem] lg:!text-[0.85rem] xl:!text-[0.90rem]">10 min* Drive from IGI Airport</p>
+              <p class="!text-[0.75rem] !font-normal !leading-[1.6] !text-white sm:!text-[0.8rem] lg:!text-[0.85rem] xl:!text-[0.90rem]">Premium Residential Catchment in the Vicinity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="enquire" class="!relative !w-full !bg-white">
+      <div class="site-container !relative !py-[3rem] sm:!py-[4rem] lg:!py-[5rem] xl:!py-[6rem]">
+        <div class="!relative !mx-auto !w-full lg:!w-[78%] xl:!w-[76%]">
+          <div data-aos="fade" data-aos-duration="900" data-aos-once="true" class="!relative !w-full">
+<img
+  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+  data-src="/images/opt/enquire-banner-1024.webp"
+  data-srcset="/images/opt/enquire-banner-480.webp 480w, /images/opt/enquire-banner-680.webp 680w, /images/opt/enquire-banner-1024.webp 1024w, /images/opt/enquire-banner-1300.webp 1300w, /images/opt/enquire-banner-1670.webp 1670w"
+  sizes="(min-width: 90rem) calc((100vw - 4rem) * 0.76), (min-width: 80rem) calc((100vw - 4rem) * 0.78), calc(100vw - 2rem)"
+  alt="Aarize Tessoro"
+  loading="lazy"
+  decoding="async"
+  width="1670"
+  height="941"
+  class="!block !h-auto !w-full !rounded-[0.2rem] !object-cover"
+>
+          </div>
+
+          <div id="enquireCardAnimation" data-aos="fade-right" data-aos-duration="900" data-aos-once="true" class="!absolute !right-[-2%] !top-[50%] !z-20 !w-[72%] !-translate-y-1/2 sm:!right-[-3%] sm:!w-[58%] lg:!right-[-5%] lg:!w-[50%] xl:!w-[48%]">
+            <div id="enquireParallaxCard" class="!w-full !bg-white !px-[1.25rem] !py-[1.25rem] !shadow-[0_0.5rem_2rem_rgba(0,0,0,0.08)] sm:!px-[1.75rem] sm:!py-[1.5rem] lg:!px-[2rem] lg:!py-[2rem] xl:!px-[2.5rem] xl:!py-[2.25rem]">
+              <h2 class="!font-display !text-[1.25rem] !font-normal !leading-[1.25] !text-blue sm:!text-[1.4rem] lg:!text-[1.85rem] xl:!text-[1.8rem]">When It Comes To Treasure,<br>Finders Are Keepers.</h2>
+              <p class="!mt-[0.9rem] !font-body !text-[0.7rem] !font-normal !leading-[1.7] !text-[#000] sm:!mt-[1rem] sm:!text-[0.75rem] lg:!mt-[1.1rem] lg:!text-[0.8rem] xl:!mt-[1.25rem] xl:!text-[0.85rem]">Going on a treasure hunt, discovering a treasure and claiming it as your own is an exhilarating experience. We invite you to feel this thrill when you discover Aarize The Tessoro. An uber-luxury mall located in the heart of the city’s most vibrant and developing area, the property is a treasure waiting to be unveiled.</p>
+              <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-once="true">
+                <a href="#contact" class="!mt-[1rem] !inline-flex !h-[2.25rem] !items-center !justify-center !gap-[0.5rem] !bg-rose !px-[1rem] !text-[0.65rem] !font-semibold !text-white !transition-colors !duration-300 hover:!bg-blue sm:!h-[2.4rem] sm:!px-[1.25rem] sm:!text-[0.7rem] lg:!mt-[1.25rem] lg:!h-[2.6rem] lg:!px-[1.4rem] lg:!text-[0.75rem] xl:!h-[2.75rem] xl:!px-[1.5rem] xl:!text-[0.8rem]">
+                  ENQUIRE NOW
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="!h-[0.7rem] !w-[0.7rem] lg:!h-[0.8rem] lg:!w-[0.8rem] xl:!h-[0.9rem] xl:!w-[0.9rem]">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m13 6 6 6-6 6" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="property-highlights" class="!w-full !bg-white">
+      <div class="site-container2 !py-[4rem] sm:!py-[5rem] lg:!py-[1rem] xl:!py-[1rem]">
+        <div class="!mx-auto !mb-[2.75rem] !max-w-[45rem] !text-center lg:!mb-[3.5rem]">
+          <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="0" data-aos-once="true" class="!font-display !text-[1.7rem] !font-normal !leading-[1.2] !text-blue/100 sm:!text-[1.9rem] lg:!text-[2.5rem] xl:!text-[2.5rem]">Property Highlights</h2>
+          <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-once="true" class="!mt-[0.6rem] !font-body !text-[0.65rem] !font-normal !leading-[1.7] !text-black/90 sm:!text-[0.7rem] lg:!text-[0.95rem] xl:!text-[0.95rem]">Experience world-class shopping, dining, and entertainment under one roof.</p>
+        </div>
+        <div id="highlightGrid" class="!grid !grid-cols-1 !gap-x-[1rem] !gap-y-[2.5rem] sm:!grid-cols-2 sm:!gap-x-[1.25rem] sm:!gap-y-[3rem] lg:!grid-cols-4 lg:!gap-x-[1rem] lg:!gap-y-[2.75rem] xl:!gap-x-[1.25rem] xl:!gap-y-[3rem]"></div>
+      </div>
+    </section>
+
+    <section id="locationadvantage" class="!w-full !bg-white">
+      <div class="site-container !py-[4rem] sm:!py-[5rem] lg:!py-[5.5rem] xl:!py-[6rem]">
+        <div data-aos="fade-up" data-aos-duration="700" data-aos-once="true" class="!mb-[3rem] !text-center sm:!mb-[3.5rem] lg:!mb-[4rem]">
+          <h2 class="!font-display !text-[1.8rem] !font-normal !leading-[1.2] !text-blue sm:!text-[2rem] lg:!text-[2.5rem] xl:!text-[2.5rem]">Location Advantage</h2>
+        </div>
+
+        <div class="!grid !grid-cols-1 !gap-[3rem] lg:!grid-cols-12 lg:!gap-[3rem] xl:!gap-[4rem]">
+          <div class="!flex !w-full !flex-col lg:!col-span-4">
+            <h3 data-aos="fade-up" data-aos-duration="800" data-aos-delay="0" data-aos-once="true" class="!max-w-[22rem] !font-display !text-[1.8rem] !font-semibold !uppercase !leading-[1.65] !tracking-[0.15em] !text-[#222222] sm:!text-[2rem] lg:!text-[1.75rem] xl:!text-[2rem]">Think of It<br>as Your<br>Treasure Map</h3>
+            <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-once="true" class="!mt-[1.5rem] !max-w-[25rem] !font-body !text-[0.65rem] !font-normal !leading-[1.7] !text-black/[0.7] sm:!text-[0.7rem] lg:!text-[0.68rem] xl:!text-[0.72rem]">As one of the top luxury retail destinations in India for the discerning few in this part of Delhi-NCR, the project will feature the best of international and domestic brands in fashion, entertainment, dining and much more.</p>
+
+            <div class="!mt-[1.5rem] !w-full !max-w-[25rem]">
+              <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="0" data-aos-once="true" class="!relative !border-b !border-dotted !border-[#cfcfcf] !py-[0.55rem]">
+                <span class="!block !pr-[1.5rem] !font-body !text-[0.65rem] !font-semibold !text-black/[0.8] sm:!text-[0.7rem] lg:!text-[0.68rem] xl:!text-[0.72rem]">2,50,000+ people in the vicinity</span>
+                <span class="!absolute !right-[-1rem] !top-[2.2rem] !-translate-y-1/2 !font-body !text-[0.65rem] !font-normal !leading-none !text-rose" aria-hidden="true">×</span>
+              </div>
+              <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="50" data-aos-once="true" class="!relative !border-b !border-dotted !border-[#cfcfcf] !py-[0.55rem]">
+                <span class="!block !pr-[1.5rem] !font-body !text-[0.65rem] !font-semibold !text-black/[0.8] sm:!text-[0.7rem] lg:!text-[0.68rem] xl:!text-[0.72rem]">Bang on 75 m road (Upper Dwarka Expressway)</span>
+                <span class="!absolute !right-[-1rem] !top-[2.2rem] !-translate-y-1/2 !font-body !text-[0.65rem] !font-normal !leading-none !text-rose" aria-hidden="true">×</span>
+              </div>
+              <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="100" data-aos-once="true" class="!relative !border-b !border-dotted !border-[#cfcfcf] !py-[0.55rem]">
+                <span class="!block !pr-[1.5rem] !font-body !text-[0.65rem] !font-semibold !text-black/[0.8] sm:!text-[0.7rem] lg:!text-[0.68rem] xl:!text-[0.72rem]">*0 km from Delhi</span>
+                <span class="!absolute !right-[-1rem] !top-[2.2rem] !-translate-y-1/2 !font-body !text-[0.65rem] !font-normal !leading-none !text-rose" aria-hidden="true">×</span>
+              </div>
+              <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="150" data-aos-once="true" class="!relative !border-b !border-dotted !border-[#cfcfcf] !py-[0.55rem]">
+                <span class="!block !pr-[1.5rem] !font-body !text-[0.65rem] !font-semibold !text-black/[0.8] sm:!text-[0.7rem] lg:!text-[0.68rem] xl:!text-[0.72rem]">*2-min drive from Najafgarh & Kapashera road</span>
+                <span class="!absolute !right-[-1rem] !top-[2.2rem] !-translate-y-1/2 !font-body !text-[0.65rem] !font-normal !leading-none !text-rose" aria-hidden="true">×</span>
+              </div>
+              <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="200" data-aos-once="true" class="!relative !border-b !border-dotted !border-[#cfcfcf] !py-[0.55rem]">
+                <span class="!block !pr-[1.5rem] !font-body !text-[0.65rem] !font-semibold !text-black/[0.8] sm:!text-[0.7rem] lg:!text-[0.68rem] xl:!text-[0.72rem]">*5-min drive by metro station (Dwarka Sec 25)</span>
+                <span class="!absolute !right-[-1rem] !top-[2.2rem] !-translate-y-1/2 !font-body !text-[0.65rem] !font-normal !leading-none !text-rose" aria-hidden="true">×</span>
+              </div>
+              <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="250" data-aos-once="true" class="!relative !border-b !border-dotted !border-[#cfcfcf] !py-[0.55rem]">
+                <span class="!block !pr-[1.5rem] !font-body !text-[0.65rem] !font-semibold !text-black/[0.8] sm:!text-[0.7rem] lg:!text-[0.68rem] xl:!text-[0.72rem]">*10-min drive from IGI Airport</span>
+                <span class="!absolute !right-[-1rem] !top-[2.2rem] !-translate-y-1/2 !font-body !text-[0.65rem] !font-normal !leading-none !text-rose" aria-hidden="true">×</span>
+              </div>
+              <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="300" data-aos-once="true" class="!relative !border-b !border-dotted !border-[#cfcfcf] !py-[0.55rem]">
+                <span class="!block !pr-[1.5rem] !font-body !text-[0.65rem] !font-semibold !text-black/[0.8] sm:!text-[0.7rem] lg:!text-[0.68rem] xl:!text-[0.72rem]">*2-min drive from Dwarka Expressway</span>
+                <span class="!absolute !right-[-1rem] !top-[2.2rem] !-translate-y-1/2 !font-body !text-[0.65rem] !font-normal !leading-none !text-rose" aria-hidden="true">×</span>
+              </div>
+            </div>
+
+            <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-once="true" class="!mt-[1.5rem] !max-w-[25rem] !font-body !text-[0.62rem] !font-normal !leading-[1.75] !text-black/[0.7] sm:!text-[0.68rem] lg:!text-[0.65rem] xl:!text-[0.7rem]">Sector 114 in Gurugram is a prime hub for Commercial Real Estate investment, attracting businesses due to its strategic location, excellent connectivity and a catchment of high-end housing in the vicinity, driving demand in this sub-market.</p>
+
+            <div class="!mt-[1.25rem]">
+              <h4 class="!font-body !text-[0.7rem] !font-semibold !text-[#222222]">Legends</h4>
+              <div class="!mt-[0.5rem] !flex !flex-wrap !gap-x-[0.75rem] !gap-y-[0.4rem]">
+                <span class="!flex !items-center !gap-[0.3rem] !font-body !text-[0.5rem] !text-black/[0.7]"><span class="!h-[0.45rem] !w-[0.45rem] !rounded-full !bg-[#c9918b]"></span>Commercial</span>
+                <span class="!flex !items-center !gap-[0.3rem] !font-body !text-[0.5rem] !text-black/[0.7]"><span class="!h-[0.45rem] !w-[0.45rem] !rounded-full !bg-[#8b8b8b]"></span>Public Utilities</span>
+                <span class="!flex !items-center !gap-[0.3rem] !font-body !text-[0.5rem] !text-black/[0.7]"><span class="!h-[0.45rem] !w-[0.45rem] !rounded-full !bg-[#8b8b8b]"></span>DMRC</span>
+                <span class="!flex !items-center !gap-[0.3rem] !font-body !text-[0.5rem] !text-black/[0.7]"><span class="!h-[0.45rem] !w-[0.45rem] !rounded-full !bg-blue"></span>Hotel</span>
+                <span class="!flex !items-center !gap-[0.3rem] !font-body !text-[0.5rem] !text-black/[0.7]"><span class="!h-[0.45rem] !w-[0.45rem] !rounded-full !bg-[#d9a38d]"></span>Residential</span>
+                <span class="!flex !items-center !gap-[0.3rem] !font-body !text-[0.5rem] !text-black/[0.7]"><span class="!h-[0.45rem] !w-[0.45rem] !rounded-full !bg-[#e1c98c]"></span>Institutional</span>
+                <span class="!flex !items-center !gap-[0.3rem] !font-body !text-[0.5rem] !text-black/[0.7]"><span class="!h-[0.45rem] !w-[0.45rem] !rounded-full !bg-[#cfcfcf]"></span>Railway</span>
+                <span class="!flex !items-center !gap-[0.3rem] !font-body !text-[0.5rem] !text-black/[0.7]"><span class="!h-[0.45rem] !w-[0.45rem] !rounded-full !bg-[#df7777]"></span>Hospital</span>
+              </div>
+            </div>
+
+            <p class="!mt-[0.9rem] !font-body !text-[0.45rem] !text-black/[0.55]">*Depending on traffic conditions.</p>
+          </div>
+
+         <div
+  data-aos="fade-left"
+  data-aos-duration="800"
+  data-aos-once="true"
+  class="!flex !h-full !min-h-[20rem] !w-full !items-stretch !overflow-hidden lg:!col-span-8 lg:!min-h-0"
+>
+  <img
+    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+    data-src="/images/opt/location_map-1024.webp"
+    data-srcset="/images/opt/location_map-680.webp 680w, /images/opt/location_map-1024.webp 1024w, /images/opt/location_map-1400.webp 1400w, /images/opt/location_map-1800.webp 1800w"
+    sizes="(min-width: 80rem) calc((100vw - 4rem) * 0.66), calc(100vw - 2rem)"
+    alt="Aarize Tessoro Location Map"
+    loading="lazy"
+    width="2734"
+    height="1479"
+    decoding="async"
+    class="!block !h-full !min-h-full !w-full !object-cover"
+  >
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="walkthrough" class="!w-full !bg-white">
+      <div class="site-container !py-[4rem] sm:!py-[5rem] lg:!py-[1rem] xl:!py-[1rem]">
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-once="true" class="!mb-[2.5rem] !text-center sm:!mb-[3rem] lg:!mb-[3.5rem]">
+          <h2 class="!font-display !text-[1.8rem] !font-normal !leading-[1.2] !text-blue sm:!text-[2rem] lg:!text-[2.15rem] xl:!text-[2.35rem]">Walkthrough</h2>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150" data-aos-once="true" class="!relative !mx-auto !w-full !overflow-hidden !object-cover aspect-video">
+          <iframe class="!absolute !inset-0 !h-full !w-full" data-src="https://www.youtube-nocookie.com/embed/hSrJZa-Kxcc?autoplay=1&mute=1&loop=1&playlist=hSrJZa-Kxcc&controls=0&rel=0&modestbranding=1&playsinline=1" title="The Tessoro Walkthrough"  loading="lazy" frameborder="0" allow="autoplay;  encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="!w-full !bg-white">
+      <div class="site-container2 !py-[4rem] sm:!py-[5rem] lg:!py-[4rem] xl:!py-[4rem]">
+        <div class="!mx-auto !mb-[2.75rem] !max-w-[45rem] !text-center lg:!mb-[3.5rem]">
+          <h2 data-aos="fade-up" data-aos-duration="800" data-aos-once="true" class="!font-display !text-[1.7rem] !font-normal !leading-[1.2] !text-blue/100 sm:!text-[1.9rem] lg:!text-[2.3rem] xl:!text-[2.3rem]">Gallery</h2>
+        </div>
+        <div id="galleryGrid" class="!grid !grid-cols-1 !gap-x-[1rem] !gap-y-[1.5rem] sm:!grid-cols-2 sm:!gap-x-[1.25rem] sm:!gap-y-[1.75rem] lg:!grid-cols-3 lg:!gap-x-[1.25rem] lg:!gap-y-[2rem] xl:!gap-x-[1.5rem] xl:!gap-y-[2.25rem]"></div>
+      </div>
+    </section>
+
+    <section id="zones" class="!w-full !bg-white">
+      <div class="site-container2 !py-[3rem] sm:!py-[3rem] lg:!py-[2rem] xl:!py-[2rem]">
+        <div class="!mx-auto !mb-[2.75rem] !max-w-[45rem] !text-center lg:!mb-[3.5rem]">
+          <h2 data-aos="fade-up" data-aos-duration="800" data-aos-once="true" class="!font-display !text-[1.7rem] !font-normal !leading-[1.2] !text-blue/100 sm:!text-[1.9rem] lg:!text-[2.3rem] xl:!text-[2.3rem]">Zones</h2>
+        </div>
+        <div id="zoneGrid" class="!grid !grid-cols-1 !gap-x-[1rem] !gap-y-[2.5rem] sm:!grid-cols-2 sm:!gap-x-[1.25rem] sm:!gap-y-[3rem] lg:!grid-cols-3 lg:!gap-x-[1rem] lg:!gap-y-[2.75rem] xl:!gap-x-[1.25rem] xl:!gap-y-[3rem]"></div>
+      </div>
+    </section>
+
+    <section id="consultants" class="!w-full !bg-white">
+      <div class="site-container2 !py-[3rem] sm:!py-[3rem] lg:!py-[3rem] xl:!py-[3rem]">
+        <div class="!mx-auto !mb-[2.75rem] !max-w-[45rem] !text-center lg:!mb-[3.5rem]">
+          <h2 data-aos="fade-up" data-aos-duration="800" data-aos-once="true" class="!font-display !text-[1.7rem] !font-normal !leading-[1.2] !text-blue/100 sm:!text-[1.9rem] lg:!text-[2rem] xl:!text-[2rem]">In the Right Hands, <br> Vision Turns Into Treasure</h2>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-once="true" id="consultantGrid" class="!flex !w-full !items-start !gap-x-[0.65rem] sm:!gap-x-[0.8rem] lg:!gap-x-[0.75rem] xl:!gap-x-[0.85rem]"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="!w-full !bg-white">
+      <div class="site-container2 !py-[4rem] sm:!py-[5rem] lg:!py-[1rem] xl:!py-[1rem]">
+        <div class="!relative !w-full !overflow-hidden !bg-white">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/images/opt/highlight_7-1200.webp" data-srcset="/images/opt/highlight_7-640.webp 640w, /images/opt/highlight_7-1000.webp 1000w, /images/opt/highlight_7-1200.webp 1200w" sizes="(min-width: 48rem) calc(100vw - 14rem), 100vw" alt="Aarize Tessoro Contact" loading="lazy" decoding="async" width="1200" height="1100" class="!absolute !inset-0 !h-full !w-full !object-cover">
+          <div class="!absolute !inset-0 !z-[1] !bg-gradient-to-r !from-white/[0.88] !via-white/[0.55] !to-transparent"></div>
+
+          <div class="!relative !z-10 !grid !w-full !grid-cols-1 lg:!grid-cols-2">
+            <div class="!flex !w-full !flex-col !justify-center !px-[2rem] !py-[3rem] sm:!px-[3rem] sm:!py-[4rem] lg:!px-[3rem] lg:!py-[4rem] xl:!px-[4.5rem] xl:!py-[4.5rem]">
+              <h2 data-aos="fade-up" data-aos-duration="800" data-aos-delay="0" data-aos-once="true" class="!font-display !text-[2rem] !font-normal !leading-[1.15] !text-blue sm:!text-[2.2rem] lg:!text-[2.35rem] xl:!text-[2.55rem]">Get In Touch With Us</h2>
+              <p data-aos="fade-up" data-aos-duration="700" data-aos-delay="100" data-aos-once="true" class="!mt-[0.7rem] !max-w-[22rem] !font-body !text-[0.68rem] !font-medium !leading-[1.55] !text-black/[0.7] sm:!text-[0.72rem] lg:!text-[0.75rem] xl:!text-[0.78rem]">Fill this given form we will get back to you shortly. Or you can directly call us on <a href="tel:+919464700700" class="!font-semibold !text-rose">+91 9464700700</a></p>
+
+              <form id="enquiryForm" novalidate data-aos="fade-left" data-aos-duration="800" data-aos-delay="150" data-aos-once="true" class="!mt-[1.15rem] !w-full !max-w-[20rem] sm:!max-w-[21rem] lg:!max-w-[25rem] xl:!max-w-[25rem]">
+                <!-- Honeypot (spam trap): hidden from people, bots fill it -->
+                <div class="!absolute !left-[-9999px] !h-px !w-px !overflow-hidden" aria-hidden="true">
+                  <label for="enq-company">Company</label>
+                  <input type="text" id="enq-company" name="company" tabindex="-1" autocomplete="off">
+                </div>
+
+                <input type="hidden" id="enq-country-code" name="countryCode" value="+91">
+
+                <div class="!mb-[0.55rem]">
+                  <label for="enq-name" class="sr-only">Name</label>
+                  <input type="text" id="enq-name" name="name" placeholder="Name" autocomplete="name" maxlength="50" required aria-describedby="enq-name-error" class="!h-[2.2rem] !w-full !rounded-none !border !rounded-[0.2rem] !border-[#9f9f9f] !bg-white/[0.9] !px-[0.7rem] !font-body !text-[0.65rem] !font-medium !text-black !outline-none placeholder:!text-black/[0.45] focus:!border-rose aria-[invalid=true]:!border-[#B3261E] sm:!h-[2.3rem] sm:!text-[0.68rem]">
+                  <p id="enq-name-error" class="!mt-[0.2rem] !font-body !text-[0.6rem] !font-medium !leading-[1.3] !text-[#B3261E]" hidden></p>
+                </div>
+
+                <div class="!mb-[0.55rem]">
+                  <div class="!flex !h-[2.2rem] !w-full !items-center !overflow-hidden !border !rounded-[0.2rem] !border-[#9f9f9f] !bg-white/[0.9] has-[input[aria-invalid=true]]:!border-[#B3261E] has-[input:focus]:!border-rose sm:!h-[2.3rem]">
+                    <div class="!flex !h-full !w-[3.3rem] !shrink-0 !items-center !justify-center !gap-[0.2rem] !border-r !border-[#d0d0d0] !font-body !text-[0.55rem] !font-medium !text-black/[0.7]" aria-hidden="true">🇮🇳 <span>+91</span></div>
+                    <label for="enq-phone" class="sr-only">Phone number (India, +91)</label>
+                    <input type="tel" id="enq-phone" name="phone" placeholder="Phone Number" inputmode="numeric" autocomplete="tel-national" required aria-describedby="enq-phone-error" class="!h-full !w-full !border-0 !bg-transparent !px-[0.7rem] !font-body !text-[0.65rem] !font-medium !text-black !outline-none placeholder:!text-black/[0.45] sm:!text-[0.68rem]">
+                  </div>
+                  <p id="enq-phone-error" class="!mt-[0.2rem] !font-body !text-[0.6rem] !font-medium !leading-[1.3] !text-[#B3261E]" hidden></p>
+                </div>
+
+                <div class="!mb-[0.55rem]">
+                  <label for="enq-email" class="sr-only">Email</label>
+                  <input type="email" id="enq-email" name="email" placeholder="Email" autocomplete="email" maxlength="100" required aria-describedby="enq-email-error" class="!h-[2.2rem] !w-full !rounded-none !border !rounded-[0.2rem] !border-[#9f9f9f] !bg-white/[0.9] !px-[0.7rem] !font-body !text-[0.65rem] !font-medium !text-black !outline-none placeholder:!text-black/[0.45] focus:!border-rose aria-[invalid=true]:!border-[#B3261E] sm:!h-[2.3rem] sm:!text-[0.68rem]">
+                  <p id="enq-email-error" class="!mt-[0.2rem] !font-body !text-[0.6rem] !font-medium !leading-[1.3] !text-[#B3261E]" hidden></p>
+                </div>
+
+                <div class="!mb-[0.75rem]">
+                  <label for="enq-message" class="sr-only">Message</label>
+                  <textarea id="enq-message" name="message" placeholder="Message" rows="3" maxlength="500" required aria-describedby="enq-message-error" class="!h-[4.2rem] !w-full !resize-none !rounded-none !border !rounded-[0.2rem] !border-[#9f9f9f] !bg-white/[0.9] !px-[0.7rem] !py-[0.6rem] !font-body !text-[0.65rem] !font-medium !text-black !outline-none placeholder:!text-black/[0.45] focus:!border-rose aria-[invalid=true]:!border-[#B3261E] sm:!text-[0.68rem]"></textarea>
+                  <p id="enq-message-error" class="!mt-[0.2rem] !font-body !text-[0.6rem] !font-medium !leading-[1.3] !text-[#B3261E]" hidden></p>
+                </div>
+
+                <button type="submit" class="!inline-flex !h-[2.2rem] !items-center !justify-center !border-0 !bg-rose !px-[1.25rem] !font-body !text-[0.58rem] !font-semibold !text-white !transition-opacity hover:!opacity-90 disabled:!cursor-wait disabled:!opacity-70 sm:!h-[2.3rem] sm:!text-[0.6rem]">Enquire Now</button>
+                <p id="enquiryStatus" role="status" aria-live="polite" class="!mt-[0.6rem] !font-body !text-[0.65rem] !font-semibold !leading-[1.4]" hidden></p>
+              </form>
+            </div>
+
+            <div class="!relative !flex !min-h-[22rem] !w-full !items-center !justify-center !px-[2rem] !py-[3rem] sm:!min-h-[25rem] sm:!px-[3rem] lg:!min-h-[35rem] lg:!px-[3rem] xl:!min-h-[35rem] xl:!px-[4rem]">
+              <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="150" data-aos-once="true" class="!flex !w-full !max-w-[24rem] !flex-col !gap-[1rem] lg:!absolute lg:!left-[-1rem] lg:!top-1/2 lg:!-translate-y-1/2 xl:!left-[-1rem]">
+                <div class="!flex !min-h-[3.2rem] !w-full !items-center !gap-[0.7rem] !rounded-[0.3rem] !border !border-[#8e9aad] !bg-white !px-[1rem] !py-[0.75rem] !shadow-[0_0.15rem_0.4rem_rgba(0,0,0,0.08)]">
+                  <span class="!flex !h-[1.35rem] !w-[1.35rem] !shrink-0 !items-center !justify-center !text-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="!h-[1rem] !w-[1rem]"><path fill-rule="evenodd" d="M12 2.25a7.5 7.5 0 0 0-7.5 7.5c0 5.37 7.5 12 7.5 12s7.5-6.63 7.5-12a7.5 7.5 0 0 0-7.5-7.5Zm0 10.25a2.75 2.75 0 1 1 0-5.5 2.75 2.75 0 0 1 0 5.5Z" clip-rule="evenodd" /></svg>
+                  </span>
+                  <p class="!font-body !text-[0.55rem] !font-semibold !leading-[1.4] !text-rose sm:!text-[0.75rem]">Sector 114, Dwarka Expressway, Gurugram - 122017</p>
+                </div>
+                <a href="tel:+919464700700" class="!flex !min-h-[3.2rem] !w-full !items-center !gap-[0.7rem] !rounded-[0.3rem] !border !border-[#8e9aad] !bg-white !px-[1rem] !py-[0.75rem] !shadow-[0_0.15rem_0.4rem_rgba(0,0,0,0.08)]">
+                  <span class="!flex !h-[1.35rem] !w-[1.35rem] !shrink-0 !items-center !justify-center !text-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="!h-[1rem] !w-[1rem]"><path d="M1.5 4.5A3 3 0 0 1 4.5 1.5h2.25a1.5 1.5 0 0 1 1.46 1.15l1.05 4.2a1.5 1.5 0 0 1-.54 1.53L7.1 9.7a15.7 15.7 0 0 0 7.2 7.2l1.32-1.62a1.5 1.5 0 0 1 1.53-.54l4.2 1.05a1.5 1.5 0 0 1 1.15 1.46v2.25a3 3 0 0 1-3 3h-.75C9.5 22.5 1.5 14.5 1.5 4.5V4.5Z" /></svg>
+                  </span>
+                  <p class="!font-body !text-[0.55rem] !font-semibold !text-rose sm:!text-[0.75rem]">+91 9464700700</p>
+                </a>
+                <a href="mailto:info@aarize.in" class="!flex !min-h-[3.2rem] !w-full !items-center !gap-[0.7rem] !rounded-[0.3rem] !border !border-[#8e9aad] !bg-white !px-[1rem] !py-[0.75rem] !shadow-[0_0.15rem_0.4rem_rgba(0,0,0,0.08)]">
+                  <span class="!flex !h-[1.35rem] !w-[1.35rem] !shrink-0 !items-center !justify-center !text-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="!h-[1rem] !w-[1rem]"><path d="M2.25 5.25A2.25 2.25 0 0 1 4.5 3h15a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 19.5 21h-15a2.25 2.25 0 0 1-2.25-2.25V5.25Zm2.25.75v.32l7.5 5.25 7.5-5.25V6h-15Zm15 2.16-6.64 4.65a1.5 1.5 0 0 1-1.72 0L4.5 8.16v10.59h15V8.16Z" /></svg>
+                  </span>
+                  <p class="!font-body !text-[0.55rem] !font-semibold !text-rose sm:!text-[0.75rem]">info@aarize.in</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="!relative !w-full !bg-[#292929]">
+    <div class="site-container !py-[2.5rem] sm:!py-[3rem] lg:!py-[3.5rem] xl:!py-[4rem]">
+      <div class="!w-full">
+        <p class="!font-body !text-[0.48rem] !font-normal !leading-[1.65] !text-white/[0.65] sm:!text-[0.5rem] lg:!text-[0.55rem] xl:!text-[0.58rem]">HARERA Reg. No.: 102 of 2024 dated 07.10.2024 for Aarize The Tessoro, vide Certificate No. RC/REP/HARERA/GGM/875/607/2024/102, <a href="https://haryanarera.gov.in" target="_blank" rel="noopener noreferrer" class="!underline !underline-offset-[0.1rem] hover:!text-white">www.haryanarera.gov.in</a>, a Commercial Colony Project, is being developed by Aarize Realtech LLP (LLPIN No. ACB-1333) on land admeasuring 2.025 acres (0.8195 hectare) approx. situated in the revenue estate of village Bajghera, Sector-114, Gurugram Manesar Urban Complex, District Gurugram, Haryana- 122017 in Collaboration with Land Owners (Shri. Ram Kishan Rana, Shri. Kuljish Rana, Shri. Partap Singh) vide registered Collaboration Agreement bearing no. 2192 dated 18-5-2023 having License No. 38 of 2024 dated 12-03-2024, valid upto 11.03.2029 issued by DGTCP/DTCP and approved building plan vide Memo No. ZP-1990/JD(RD)/2024/28095 dated 06-09-2024 and/or any further revisions in future. Corporate office at 3rd Floor, Unit no. 301-309, Spaze Boulevard-1, Sohna Road, Sector-47, Gurugram-122002, Haryana, India. Tel. No.: +91-124-4156000. Email: <a href="mailto:info@aarize.in" class="!underline !underline-offset-[0.1rem] hover:!text-white">info@aarize.in</a>. <strong class="!font-semibold !text-white/[0.7]">Unit No.: Retail-205, Retail-206, Retail-207 and Third Floor AUDI – 01, 02, 03, 04 & Multiplex Lobby with total Carpet Area of 1271.288 sq. mtrs. is mortgaged with DTCP.</strong> Architecture & Design Consultant:- ACPL. Structure Consultant:- TPC. MEP Consultant:- Udayan Chaudhari & Associates Pvt. Ltd. Landscape Consultant:- Roha. Architecture Visualization Consultant:- Lifang.</p>
+
+        <p class="!mt-[0.25rem] !font-body !text-[0.48rem] !font-normal !leading-[1.65] !text-white/[0.65] sm:!text-[0.5rem] lg:!text-[0.55rem] xl:!text-[0.58rem]"><strong class="!font-semibold !text-white/[0.75]">*Disclaimer:</strong> All information, images and visuals, drawings, plans of sketches given herein are only an architect’s impression, representative images or artistic impression and not to scale. Nothing contained herein intends to constitute a legal offer and does not form part of any legally binding agreement and/or commitment of any nature. The Developer/LLP endeavours to keep the information up to date and correct. Recipients/Viewers are advised to exercise their discretion in relying on the information shown/provided and are requested to verify all the details, including area, amenities, services, terms of sales and payments and other relevant terms independently with the sales Team/Developer, and have a thorough understanding of the same and take appropriate advice prior to concluding any decision for buying any unit(s) in the Project. In no event we offer any warranty on the information made available or be liable for any loss or damage, including any indirect or consequential loss or damage in connection with the use of information provided herein. T&C Apply. Please refer:- 1 Hectare = 2.471 Acre, 1 Acre = 4046.86 sq. mtrs. or 4840 sq. yds., 1 sq. mtrs. = 10.764 sq. ft.</p>
+
+        <div class="!mt-[1rem]">
+          <a href="https://haryanarera.gov.in" target="_blank" rel="noopener noreferrer" class="!font-body !text-[0.48rem] !font-normal !text-white/[0.65] !underline !underline-offset-[0.1rem] hover:!text-white sm:!text-[0.5rem] lg:!text-[0.55rem]">HARERA Website</a>
+        </div>
+
+        <div class="!mt-[1.5rem] !border-t !border-white/[0.08] !pt-[1rem] !text-center">
+          <p class="!font-body !text-[0.48rem] !font-normal !leading-[1.5] !text-white/[0.55] sm:!text-[0.5rem] lg:!text-[0.55rem]">Copyright © The Tessoro 2024 | All rights reserved <span class="!mx-[0.2rem]">|</span> Powered By <a href="https://digicomm.in/" target="_blank" rel="noopener noreferrer" class="hover:!text-white">Digicomm Marketing Services LLP</a> <span class="!mx-[0.2rem]">|</span> <a href="/privacy-policy/" class="hover:!text-white">Privacy Policy</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="!fixed !bottom-[1.5rem] !right-[1.25rem] !z-[9999] !flex !items-center !gap-0 sm:!bottom-[2rem] sm:!right-[1.5rem]">
+    <a href="tel:+919464700700" class="!relative !flex !h-[2.1rem] !items-center !rounded-l-[0.6rem] !rounded-r-[0.6rem] !bg-white !px-[0.9rem] !pr-[1.15rem] !font-body !text-[0.7rem] !font-medium !text-[#333333] !shadow-[0_0.2rem_0.7rem_rgba(0,0,0,0.2)] sm:!h-[2.25rem] sm:!px-[1rem] sm:!pr-[1.3rem] sm:!text-[0.72rem]">
+      Call Now
+      <span class="!absolute !right-[-0.45rem] !top-1/2 !h-0 !w-0 !-translate-y-1/2 !border-y-[0.45rem] !border-l-[0.45rem] !border-y-transparent !border-l-white"></span>
+    </a>
+    <a href="tel:+919464700700" aria-label="Call Aarize Tessoro" class="!relative !z-10 !ml-[0.4rem] !flex !h-[2.7rem] !w-[2.7rem] !shrink-0 !items-center !justify-center !rounded-full !bg-[#00D084] !shadow-[0_0.2rem_0.8rem_rgba(0,0,0,0.2)] !transition-transform !duration-300 hover:!scale-105 sm:!h-[2.9rem] sm:!w-[2.9rem]">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="!h-[1.15rem] !w-[1.15rem] !text-white sm:!h-[1.2rem] sm:!w-[1.2rem]"><path d="M1.5 4.5A3 3 0 0 1 4.5 1.5h2.25a1.5 1.5 0 0 1 1.46 1.15l1.05 4.2a1.5 1.5 0 0 1-.54 1.53L7.1 9.7a15.7 15.7 0 0 0 7.2 7.2l1.32-1.62a1.5 1.5 0 0 1 1.53-.54l4.2 1.05a1.5 1.5 0 0 1 1.15 1.46v2.25a3 3 0 0 1-3 3h-.75C9.5 22.5 1.5 14.5 1.5 4.5V4.5Z" /></svg>
+    </a>
+  </div>
+
+  <!-- AOS Library JS (self-hosted copy of cdnjs aos@2.3.4) -->
+  <script src="/js/aos.js" defer></script>
+  <!-- Main Script -->
+  <script src="/script.js" defer></script>
+</body>
+</html>
